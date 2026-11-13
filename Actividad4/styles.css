@@ -1,0 +1,75 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2rem;
+}
+
+h1 {
+    font-size: larger;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.contenedor-calculadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid #333;
+    padding: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.numerosCalculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+input {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    background-color: #fafafa;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button {
+    padding: 1rem 3rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.botonSumar {
+    background-color: rgb(147, 224, 160);
+}
+
+.botonLimpiar {
+    background-color: rgb(224, 147, 147);
+}
+
+.mensaje {
+    color: #b00020;
+    margin: 0;
+}
+
+.resultado {
+    margin: 0;
+}
