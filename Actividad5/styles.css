@@ -1,0 +1,89 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2rem;
+}
+
+main{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    background-color: rgb(221, 221, 221);
+    border: 0.1rem solid black ;
+    padding: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: larger;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.formularioTareas{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+
+}
+
+input{
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    background-color: #fafafa;
+}
+
+button{
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    background-color: #bcfaa9;
+}
+
+button:hover{
+    background-color: #5afa29;
+    cursor: pointer;
+}
+
+#lista-tareas{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#lista-tareas li{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+#lista-tareas li span{
+    padding: 0.5rem 1rem;
+    align-self: center;
+}
+
+
+#lista-tareas button{
+    background-color: transparent;
+    border:none;
+    border-left: 1px solid black;   /* la línea vertical */
+    border-radius: 0;
+    padding: 0.5rem 1.5rem;
+    
+}
+
+#lista-tareas button:hover{
+    background-color: #fdeaea;
+}
+
