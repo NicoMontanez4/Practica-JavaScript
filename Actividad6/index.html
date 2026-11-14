@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>Actividad6</title>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Lista de compras</h1>
+
+        <form class="formularioCompra" id="formulario-compras">
+
+            <label for="producto"></label>
+            <input type="text" name="producto" id="producto" placeholder="Ingrese un producto">
+
+            <button type="submit" id="boton-agregar-producto">Agregar</button>
+
+        </form>
+
+        <section class="contenedorProductos" id="contenedor-productos">
+
+            <p id="mensaje-error"></p>
+            <p id="mensaje-vacio">La lista está vacía</p>
+            <ul id="lista-productos"></ul>
+
+        </section>
+
+        <button type="button" id="boton-borrar">Borrar toda la lista</button>
+
+    </main>
+    
+</body>
+
+</html>
