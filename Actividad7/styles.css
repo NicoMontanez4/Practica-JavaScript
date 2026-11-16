@@ -1,0 +1,64 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+}
+
+.contenedor-buscador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    gap: 5rem;
+}
+
+.contenedor-buscador h1{
+    font-weight: lighter;
+}
+
+.contenedor-grilla-paises {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    
+}
+
+.celda-pais {
+    border: 1px solid #000;
+    background: #d9d9d9;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celda-pais:hover {
+    background: #c4c4c4;
+}
+
+.celda-pais img {
+    width: 40px;
+    display: block;
+    margin: 8px auto 0;
+}
+
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+/* Popup */
+#popup {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: min(90vw, 400px);
+    text-align: center;
+}
+
+#popup::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#popup img {
+    width: 120px;
+}

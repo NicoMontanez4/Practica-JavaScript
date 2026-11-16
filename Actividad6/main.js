@@ -1,3 +1,4 @@
+
 const formulario = document.getElementById("formulario-compras");
 const inputProducto = document.getElementById("producto");
 const mensajeError = document.getElementById("mensaje-error");
