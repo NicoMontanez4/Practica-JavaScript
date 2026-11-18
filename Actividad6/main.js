@@ -13,6 +13,7 @@ function normalizar(texto){
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
+}
 
 //agregar un producto al array
 
@@ -28,18 +29,15 @@ function agregarProducto(evento){
         return;
     }
 
-    
-}
-
     const existe = productos.some(function(item){
-        return item.toLowerCase() === producto.toLowerCase();
+            return normalizar(item) === normalizar(producto);
     });
 
     if(existe)
     {
-        mensajeError.textContent = "Ese producto ya está en la lista";
-        return;
-    }
+         mensajeError.textContent = "Ese producto ya está en la lista";
+         return;
+     }
 
         mensajeError.textContent = "";
         productos.push(producto);
@@ -89,3 +87,4 @@ function borrarLista(){
 botonBorrar.addEventListener("click", borrarLista);
 formulario.addEventListener("submit",agregarProducto);
 mostrarProductos();
+formulario.addEventListener("submit",agregarProducto);
