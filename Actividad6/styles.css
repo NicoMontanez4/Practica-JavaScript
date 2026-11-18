@@ -28,10 +28,13 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    width: 100%;
 }
 
 input {
+    flex: 1;
+    min-width: 0;
     padding: 0.8rem;
     border: 1px solid #333;
     border-radius: 0.5rem;
@@ -39,6 +42,8 @@ input {
 }
 
 button {
+    flex-shrink: 0;
+     white-space: nowrap;
     padding: 0.8rem;
     border: 1px solid #333;
     border-radius: 0.5rem;
@@ -50,12 +55,17 @@ button:hover {
     cursor: pointer;
 }
 
+
 #lista-productos {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
     border: 1px solid black;
+    max-height: 250px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
 }
 
 #lista-productos li {
@@ -71,6 +81,10 @@ button:hover {
     align-self: center;
 }
 
+#lista-productos li:last-child {
+    border-bottom: none;
+}
+
 #lista-productos button {
     background-color: transparent;
     border: none;
@@ -81,4 +95,14 @@ button:hover {
 
 #lista-productos button:hover {
     background-color: #fdeaea;
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
 }
