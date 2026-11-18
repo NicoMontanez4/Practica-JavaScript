@@ -64,6 +64,7 @@ button:hover {
     border: 1px solid black;
     max-height: 250px;
     overflow-y: auto;
+    flex-shrink: 0; 
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
 }
