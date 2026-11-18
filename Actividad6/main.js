@@ -8,6 +8,12 @@ const botonBorrar = document.getElementById("boton-borrar");
 
 let productos = JSON.parse(localStorage.getItem("productos")) || [];
 
+function normalizar(texto){
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
 //agregar un producto al array
 
 function agregarProducto(evento){
@@ -22,11 +28,7 @@ function agregarProducto(evento){
         return;
     }
 
-    function normalizar(texto){
-    return texto
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+    
 }
 
     const existe = productos.some(function(item){
