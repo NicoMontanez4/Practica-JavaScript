@@ -22,6 +22,23 @@ function agregarProducto(evento){
         return;
     }
 
+    function normalizar(texto){
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
+    const existe = productos.some(function(item){
+        return item.toLowerCase() === producto.toLowerCase();
+    });
+
+    if(existe)
+    {
+        mensajeError.textContent = "Ese producto ya está en la lista";
+        return;
+    }
+
         mensajeError.textContent = "";
         productos.push(producto);
         guardarProductos();
@@ -70,4 +87,3 @@ function borrarLista(){
 botonBorrar.addEventListener("click", borrarLista);
 formulario.addEventListener("submit",agregarProducto);
 mostrarProductos();
-formulario.addEventListener("submit", agregarProducto);
