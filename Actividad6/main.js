@@ -79,6 +79,7 @@ function mostrarProductos(){
 }
 
 function borrarLista(){
+    mensajeError.textContent = "";
     productos = [];
     guardarProductos();
     mostrarProductos();
